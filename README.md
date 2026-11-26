@@ -2,6 +2,10 @@
 
 Gestura is an AI-powered gesture communication platform designed to make communication more accessible by converting recognised hand gestures into meaningful text. It combines computer vision, machine learning, and context-aware interpretation to support more natural communication.
 
+## Live Demo
+
+**Streamlit Community Cloud:** [View Gestura on Streamlit](https://share.streamlit.io/user/van-1105)
+
 ## Project Overview
 
 Gestura captures hand movements through a webcam, identifies hand landmarks, recognises gestures, and interprets gesture sequences to generate meaningful text.
@@ -80,8 +84,6 @@ venv\Scripts\activate
 
 ### 4. Install Dependencies
 
-If a `requirements.txt` file is available:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -146,8 +148,12 @@ Gestura/
 
 **Developed using:** Python, OpenCV, MediaPipe, Random Forest and Streamlit
 
-**GitHub Repository:** https://github.com/van-1105/Gestura-AI-Communication
+**GitHub Repository:** [Gestura – GitHub](https://github.com/van-1105/Gestura-AI-Communication)
+
+**Streamlit Profile:** [View deployed applications](https://share.streamlit.io/user/van-1105)
 
 ---
+
+*Gestura aims to make communication more accessible through intelligent gesture recognition and interpretation.*
 
 *Gestura aims to make communication more accessible through intelligent gesture recognition and interpretation.*
