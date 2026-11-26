@@ -1,0 +1,228 @@
+[
+    {
+        "timestamp": "2026-11-25T08:35:50",
+        "message": "Are you okay?",
+        "language": "English",
+        "gestures": [
+            "hello",
+            "thumbs up",
+            "greetings",
+            "you",
+            "ok",
+            "water",
+            "greetings",
+            "question",
+            "good luck",
+            "greetings",
+            "hello",
+            "greetings",
+            "you"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T08:45:51",
+        "message": "Hello!",
+        "language": "English",
+        "gestures": [
+            "greetings"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T08:45:57",
+        "message": "Hello! How are you?",
+        "language": "English",
+        "gestures": [
+            "greetings",
+            "you"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T10:17:53",
+        "message": "Hello!",
+        "language": "English",
+        "gestures": [
+            "hello"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T10:18:04",
+        "message": "Hello! How are you?",
+        "language": "English",
+        "gestures": [
+            "hello",
+            "greetings",
+            "you"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T11:15:44",
+        "message": "I would like some water.",
+        "language": "English",
+        "gestures": [
+            "water"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T11:23:39",
+        "message": "I",
+        "language": "English",
+        "gestures": [
+            "water",
+            "good luck",
+            "i"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T11:23:42",
+        "message": "IA",
+        "language": "English",
+        "gestures": [
+            "water",
+            "good luck",
+            "i",
+            "a"
+        ]
+    },
+    {
+        "timestamp": "2026-11-25T11:30:28",
+        "message": "IAA",
+        "language": "English",
+        "gestures": [
+            "water",
+            "good luck",
+            "i",
+            "a",
+            "a"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T07:31:14",
+        "message": "Message could not be interpreted yet.",
+        "language": "English",
+        "gestures": [
+            "agree,stop"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T07:31:37",
+        "message": "S",
+        "language": "English",
+        "gestures": [
+            "agree,stop",
+            "s"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T07:31:46",
+        "message": "I would like some water.",
+        "language": "English",
+        "gestures": [
+            "agree,stop",
+            "s",
+            "water"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T07:43:36",
+        "message": "A",
+        "language": "English",
+        "gestures": [
+            "a"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T07:53:38",
+        "message": "AD",
+        "language": "English",
+        "gestures": [
+            "a",
+            "d"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:13:51",
+        "message": "Your name is ",
+        "language": "English",
+        "gestures": [
+            "your"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:09",
+        "message": "Your name is W",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:13",
+        "message": "Your name is W Your name is ",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w",
+            "your"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:26",
+        "message": "I would like some water.",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w",
+            "your",
+            "water"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:30",
+        "message": "Hello!",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w",
+            "your",
+            "water",
+            "hello"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:38",
+        "message": "Hello! How are you?",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w",
+            "your",
+            "water",
+            "hello",
+            "you"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:14:41",
+        "message": "Are you okay?",
+        "language": "English",
+        "gestures": [
+            "your",
+            "w",
+            "your",
+            "water",
+            "hello",
+            "you",
+            "ok"
+        ]
+    },
+    {
+        "timestamp": "2026-11-26T08:56:30",
+        "message": "WA",
+        "language": "English",
+        "gestures": [
+            "w",
+            "a"
+        ]
+    }
+]

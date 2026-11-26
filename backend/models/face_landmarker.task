@@ -1,0 +1,132 @@
+
+import cv2
+import mediapipe as mp
+import time
+
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+
+MODEL_PATH = "backend/models/face_landmarker.task"
+
+# Configure facial landmark detector
+options = vision.FaceLandmarkerOptions(
+    base_options=python.BaseOptions(
+        model_asset_path=MODEL_PATH
+    ),
+    running_mode=vision.RunningMode.VIDEO,
+    num_faces=1,
+    output_face_blendshapes=True
+)
+
+detector = vision.FaceLandmarker.create_from_options(options)
+
+camera = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
+if not camera.isOpened():
+    print("Camera could not be opened")
+    detector.close()
+    exit()
+
+print("GestureBridge Facial Tracking Started!")
+
+start_time = time.monotonic()
+
+while True:
+
+    success, frame = camera.read()
+
+    if not success:
+        print("Unable to capture frame")
+        break
+
+    frame = cv2.flip(frame, 1)
+
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    mp_image = mp.Image(
+        image_format=mp.ImageFormat.SRGB,
+        data=rgb
+    )
+
+    timestamp = int((time.monotonic() - start_time) * 1000)
+
+    results = detector.detect_for_video(
+        mp_image,
+        timestamp
+    )
+
+    if results.face_landmarks:
+
+        for face in results.face_landmarks:
+
+            # Draw facial landmarks
+            for point in face:
+                x = int(point.x * frame.shape[1])
+                y = int(point.y * frame.shape[0])
+
+                cv2.circle(
+                    frame,
+                    (x, y),
+                    1,
+                    (0, 255, 180),
+                    -1
+                )
+
+        cv2.putText(
+            frame,
+            "FACE DETECTED",
+            (20, 40),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.8,
+            (0, 255, 100),
+            2
+        )
+
+        # Display strongest facial movement cues
+        if results.face_blendshapes:
+            categories = results.face_blendshapes[0]
+
+            cues = sorted(
+                categories,
+                key=lambda item: item.score,
+                reverse=True
+            )
+
+            y_position = 75
+
+            for cue in cues[:3]:
+                text = f"{cue.category_name}: {cue.score:.2f}"
+
+                cv2.putText(
+                    frame,
+                    text,
+                    (20, y_position),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5,
+                    (255, 220, 100),
+                    1
+                )
+
+                y_position += 25
+
+    else:
+        cv2.putText(
+            frame,
+            "NO FACE DETECTED",
+            (20, 40),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.8,
+            (0, 0, 255),
+            2
+        )
+
+    cv2.imshow("GestureBridge - Face Analysis", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+camera.release()
+detector.close()
+cv2.destroyAllWindows()
